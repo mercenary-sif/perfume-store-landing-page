@@ -1243,7 +1243,11 @@ nav ul{
 .footer__links-link__social__media p {
     width: 100%;
 }
-
+.DistinguishedOpponent__contect button,
+.distinctivePerfume__grid-item button,
+.distinctivePerfume button{
+    font-size: 14px;
+}
 }
 @media screen and (max-width : 550px){
 
