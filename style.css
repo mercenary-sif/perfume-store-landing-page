@@ -1,0 +1,1381 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var( --font-1);
+    font-style: normal;
+    user-select: none;
+    direction: rtl;
+}
+:root{
+    --font-1:  "Cairo", sans-serif;
+    --font-2: "IBM Plex Sans", sans-serif;  
+    --font-3: "Playpen Sans Arabic", cursive;
+}
+body{
+    background-color: rgba(234, 221, 206, 1);
+ }
+/* Initially hidden */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+   transition: opacity 2.2s ease-out, transform 2.2s ease-out;
+}
+
+/* Show when in view */
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav{
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+   
+    align-items: center;
+    justify-content: center;
+}
+.navbar-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-logo img{
+    width:285px;
+    height: 129px;
+    object-fit: fill;
+    transition: filter 1s ease-in-out;
+}
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+nav ul{
+    width: 100%;
+    position: relative;
+    list-style: none;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav li{
+    height: 10vh;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    
+}
+nav a{
+    height: 100%;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    display: flex;
+    font-family: var( --font-1);
+    font-weight: 800;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(129, 103, 71, 1);
+}
+nav a:hover{
+ color: rgba(129, 103, 71, 0.747);   
+}
+nav a p{
+    font-weight: 500;
+    font-size: 12px;
+}
+.navbar-btn{
+    display: flex;
+    flex: 0.4;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav button {
+    width: 200px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(52, 35, 31, 1);
+    color: rgba(243, 235, 225, 1);
+    font-family: var(--font-2);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease; 
+}
+nav button:hover {
+    gap: 12px; 
+}
+
+nav button img {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease; 
+}
+
+nav button:last-child {
+    background-color: transparent;
+    border: 2px solid rgba(52, 35, 31, 1);
+    color: rgba(52, 35, 31, 1);
+}
+
+nav button:last-child:hover {
+    background-color:  rgba(52, 35, 31, 1);
+    border: none;
+    color:rgba(243, 235, 225, 1);
+}
+
+
+nav button:hover img {
+     filter: brightness(0) invert(1);
+    }
+
+
+header{
+    padding: 2rem ;
+    display: flex;
+    flex-direction: column;
+}
+.header__best-clients{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 4rem;
+}
+.header__best-clients__pic{
+    position: relative;
+    display: flex;
+}
+.header__best-clients__pic img:last-child{
+    z-index: 999;
+    margin-right: -6rem;
+}
+.header__best-clients p{
+    width: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 635px;
+    position: relative;
+}
+.header__container-cover{
+    display: flex;
+    flex: 0.3;
+}
+.header__container-cover img{
+    width: 375px;
+    height:635px ;
+    object-fit: fill;
+}
+.header__container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+.header__container-content h1{
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 55px;
+    color: rgba(16, 10, 9, 1);
+}
+.header__container-content p{
+     font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: right;
+    
+    color: rgba(16, 10, 9, 1);
+}
+.header__container-content button{
+      width: 174px;
+    height: 64px;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    border-radius: 32px;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    gap: 5px;
+    background-color: rgba(52, 35, 31, 1);
+    transition: all 0.3s ease;
+   
+}
+.header__container-content button:hover{
+    background-color: rgba(52, 35, 31, 0.959);
+    gap: 7px;
+}
+.header__container-content button p{
+     color: rgba(243, 235, 225, 1);
+    font-family: var(--font-1);
+    font-size:16px ;
+    font-weight: 600;
+}
+.header__container-perfume{
+    position: relative;
+    display: flex;
+    flex: 0.11;
+}
+.header__container-perfume img{
+     width: 467px;
+    height: 467px;
+    object-fit:fill ;
+}
+.blur{
+    position: absolute;
+    margin: 0 auto;
+    top: 40px;
+    margin-top: 10px;
+    opacity: calc(90%);
+} 
+.blur img{
+    width: 477px;
+    height: 627px;
+    object-fit:fill ;
+   transform: rotate(-1.47deg)
+}
+.CTA{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem ;
+    gap: 1rem;
+}
+.CTA__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.CTA h2{
+    font-size: 18px;
+    width:40%;
+    text-align: center;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 2%;
+    color: rgba(96, 77, 53, 1);
+}
+.CTA__container,
+.distinctivePerfume__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.CTA__container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 298px;
+    height: 110px ;
+    border-radius: 48px;
+    background-color: rgba(161, 128, 89, 1);
+}
+.CTA__container-card p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 36px;
+    text-align: center;
+    font-weight: 300;
+    line-height: 2%;
+}
+.BestSellingPerfumes{
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 2rem ;
+    gap: 2rem;
+}
+.BestSellingPerfumes__title,
+.distinctivePerfume__title{
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+}
+.BestSellingPerfumes__title h1{
+     font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 2%;
+    color: rgba(0, 0, 0, 1);
+}
+.BestSellingPerfumes__title h1 span{
+    font-family: var(--font-3);
+    font-weight: 400;
+    color: rgba(161, 128, 89, 1);
+}
+.BestSellingPerfumes__container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.BestSellingPerfumes__container-items{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+.BestSellingPerfumes__container-items img{
+    height: 483px;
+    object-fit: fill;
+}
+.BestSellingPerfumes__container-items:first-child {
+  height: 483px; 
+}
+
+.BestSellingPerfumes__container-items:first-child img {
+  height: auto !important; 
+  position: absolute;
+  bottom: 12%;
+  left: 8%;
+}
+.BestSellingPerfumes__container-items h4{
+    color: rgba(78, 52, 46, 1);
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 2%;
+}
+.BestSellingPerfumes__container-items p{
+    font-family: var(--font-3);
+    font-weight: 400;
+    width: 70%;
+    font-size: 20px;
+    color: rgba(161, 128, 89, 1);
+    margin-right: 20%;
+    margin-top: 12%;
+}
+.DistinguishedOpponent{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 4rem;
+}
+.DistinguishedOpponent__cover{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.DistinguishedOpponent__cover-pic1,
+.DistinguishedOpponent__cover-pic2{
+    display: flex;
+    align-items: center;
+}
+.DistinguishedOpponent__cover-pic2{
+    z-index: 999;
+    position: absolute;
+    right: -10rem;
+    bottom:  -2rem;
+}
+.DistinguishedOpponent__cover-pic1 img{
+    width: 413px;
+    height: 620px;
+    object-fit: fill;
+}
+.DistinguishedOpponent__cover-pic2 img{
+    width: 265px;
+    height:385px;
+    object-fit: fill;
+}
+.DistinguishedOpponent__contect{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+  
+}
+.DistinguishedOpponent__contect h1{
+    font-size:62px;
+    font-weight: 700;
+    width: 90%;
+    line-height: 85px;
+    letter-spacing: 4%;
+    color: rgba(16, 10, 9, 1);
+}
+.DistinguishedOpponent__contect h1 span{
+    font-family: var(--font-3);
+    font-weight: 400;
+    letter-spacing: 2%;
+    color: rgba(78, 52, 46, 1);
+}
+
+.DistinguishedOpponent__contect p{
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    line-height: 1.2rem;
+}
+.DistinguishedOpponent__contect button,
+.distinctivePerfume__grid-item button,
+.distinctivePerfume button{
+     width: 174px;
+    height: 64px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 1rem 2rem;
+    border-radius: 46px;
+    cursor: pointer;
+    background-color: rgba(39, 31, 21, 1);
+    color: rgba(243, 235, 225, 1);
+    font-family: var(--font-2);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease; 
+}
+.DistinguishedOpponent__contect button:hover ,
+.distinctivePerfume__grid-item button:hover,
+.distinctivePerfume button:hover{
+    gap: 6px; 
+    background-color: rgba(39, 31, 21, 0.932);
+}
+.distinctivePerfume{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: right;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+.distinctivePerfume__title{
+    width: 100%;
+}
+.distinctivePerfume__title h1{
+     font-size: 47px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: right;
+    letter-spacing: 2%;
+    color: rgba(0, 0, 0, 1);
+}
+.distinctivePerfume__header .CTA__container-card:hover{
+    cursor: pointer;
+    background-color: rgba(52, 35, 31, 1);
+}
+.distinctivePerfume__header{
+    width: 100%;
+    justify-content: center;
+}
+.distinctivePerfume__grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.distinctivePerfume__grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 308px;
+    height: 376px;
+    border-radius: 24px;
+    background-color: white;
+      transition: all 0.3s ease;
+}
+.distinctivePerfume__grid-item img{
+    width: 308px;
+    height: 262px;
+    object-fit: fill;
+}
+
+.distinctivePerfume__grid-item button img{ 
+   width: auto;
+   height: auto;
+}
+.SpecialPerfumes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 4rem 2rem;
+}
+.SpecialPerfumes__title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.SpecialPerfumes__title h1{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: right;
+    letter-spacing: 2%;
+    color: rgba(65, 43, 38, 1)
+}
+.SpecialPerfumes__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    padding-right: 12rem;
+}
+.SpecialPerfumes__container-covers{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: end;
+}
+.SpecialPerfumes__container-covers__cover1,
+.SpecialPerfumes__container-covers__cover2{
+    display: flex;
+    justify-content: center;
+}
+.SpecialPerfumes__container-covers__cover2 img{
+    width: 413px;
+    height: 620px;
+    object-fit: fill;
+}
+.SpecialPerfumes__container-covers__cover1 img{
+    width: 245px;
+    height: 361px;
+    object-fit: fill;
+    z-index: 999;
+    position: absolute;
+    right: -10rem;
+    bottom:  -2rem;
+}
+.SpecialPerfumes__container-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.SpecialPerfumes__container-content p{
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 45px;
+   letter-spacing: 12%;
+   text-align: right;
+   color: rgba(39, 31, 21, 1);
+}
+.contactUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 6rem 4rem;
+}
+.contactUs__socialMedia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.contactUs__socialMedia-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 75%;
+}
+.contactUs__socialMedia-content_cover{
+    display: flex;
+    justify-content: center;
+}
+.contactUs__socialMedia-content_cover img{
+    width: 343.56px;
+    height: 256px;
+    object-fit: fill;
+}
+.contactUs__socialMedia-content h1{
+     font-size: 33px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: 2%;
+    color: rgba(39, 31, 21, 1);
+}
+.contactUs__socialMedia button{
+    width: 326px;
+    height: 64px;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    border-radius: 46px;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    gap: 5px;
+    background-color: rgba(52, 35, 31, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2%;
+    transition: all 0.3s ease;
+   
+}
+.contactUs__socialMedia button:hover{
+    background-color: rgba(52, 35, 31, 0.959);
+    gap: 7px;
+}
+.contactUs__subscibe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.contactUs__subscibe-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contactUs__subscibe-title h1{
+     font-size: 38px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: 2%;
+    color: rgba(39, 31, 21, 1);
+}
+.contactUs__subscibe-title h3{
+   font-weight: 500;
+   font-size: 28px;
+   line-height: 45px;
+   letter-spacing: 12%;
+   text-align: right;
+   color: rgba(39, 31, 21, 1);
+}
+.contactUs__subscibe-mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+  padding: 1rem 0;
+  direction: rtl;
+ 
+}
+
+.contactUs__subscibe-mail__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #2A1E17;
+  border-radius: 46px;
+  background-color: transparent;
+   width: 380px;
+   height: 34px;
+}
+
+.contactUs__subscibe-mail__input img {
+  width: 25px;
+  height: 25px;
+}
+
+.contactUs__subscibe-mail__input input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-2);
+  font-size: 18px;
+  color: #2A1E17;
+  direction: rtl;
+}
+
+.contactUs__subscibe-mail button {
+    background-color: #2A1E17;
+    color: #F3EBE1;
+    border: none;
+    width: 164px;
+    height: 61px;
+    padding: 0.8rem 1.8rem;
+    border-radius: 46px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2%;
+    transition: all 0.3s ease;
+   
+}
+.contactUs__subscibe-mail button:hover{
+    background-color: rgba(52, 35, 31, 0.959);
+}
+.contactUs__subscibe-mail__input input::placeholder {
+  color: #2A1E17; 
+  opacity: 1; 
+  font-size: 22px;
+  font-weight: 100;
+}
+footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+    height: 619px;
+    background-color: rgba(26, 17, 15, 1);
+}
+.footer__logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex: 0.6;
+}
+.footer__logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__logo-container img{
+    width: 362px;
+    height: 166px;
+    object-fit: fill;
+}
+.footer__logo h3{
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 45px;
+   letter-spacing: 12%;
+   text-align: right;
+   color: rgba(243, 235, 225, 1);
+}
+.footer__links{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.footer__links-link,
+.footer__links-link__social__media{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+.footer__links-link h3,
+.footer__links-link__social__media h3{
+   font-weight: 700;
+   font-size: 32px;
+   line-height: 45px;
+   letter-spacing: 12%;
+   text-align: right;
+   color: rgba(193, 154, 107, 1)
+}
+.footer__links-link p,
+.footer__links-link__social__media p{
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 28px;
+   letter-spacing: 2%;
+   text-align: right;
+   color: rgba(255, 255, 255, 1);
+   width: 80%;
+   display: flex;
+   justify-content: space-between;
+    align-items: center;
+}
+.footer__links-link p img{
+    height: 15px;
+    width: auto;
+}
+.footer__links-link__social__media p {
+    width: auto;
+    gap: 1rem;
+    direction: ltr;
+    justify-content: flex-start;
+    align-items:flex-start;
+    width: 50%;
+}
+
+
+
+@media screen and (max-width : 1250px){
+.navbar-logo img{
+    width:165px;
+    height: 75px;
+    object-fit: fill;
+}
+nav li{
+    font-size: 28px;
+    margin: 1rem;
+}
+.header__container{
+    gap: 2rem;
+    height: 375px;
+}
+.header__container-cover img{
+    width: 221px;
+    height:359px ;
+}
+.header__container-content h1{
+    font-size: 29px;
+    line-height: 45px;
+}
+.header__container-content p{
+     font-size: 14px;
+    line-height: 20px;
+}
+
+.header__container-perfume img{
+    width: 319px;
+    height: 319px;
+} 
+.blur img{
+    width: 345px;
+    height: 375px;
+}
+
+.BestSellingPerfumes__container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.BestSellingPerfumes__container-items{
+    gap: 2rem;
+}
+.BestSellingPerfumes__container-items img{
+    height: 743px;
+    width:  520px;
+}
+.BestSellingPerfumes__container-items:first-child img {
+  width: auto !important;
+}
+
+.DistinguishedOpponent{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.DistinguishedOpponent__cover-pic1 img{
+    width: 543px;
+    height: 820px;
+}
+.DistinguishedOpponent__cover-pic2 img{
+    width: 295px;
+    height:445px;
+}
+
+.distinctivePerfume__grid{
+    flex-wrap: wrap;
+}
+.SpecialPerfumes__container{
+    padding: 2rem;
+}
+
+.SpecialPerfumes__container-covers__cover2 img{
+    width: 343px;
+    height: 490px;
+}
+.SpecialPerfumes__container-covers__cover1 img{
+    width: 215px;
+    height: 321px;
+    right: -3rem;
+    bottom:  12%;
+}
+.SpecialPerfumes__container-content{
+    padding: 1rem;
+}
+.SpecialPerfumes__container-content p{
+   color: rgba(200, 135, 55, 1);
+}
+.SpecialPerfumes__container-content img{
+  filter: invert(53%) sepia(68%) saturate(643%) hue-rotate(7deg) brightness(95%) contrast(88%);
+}
+
+footer{
+    flex-direction: column;
+    height: auto;
+}
+
+
+
+.footer__links{
+    flex-direction: column;
+}
+.footer__links-link,
+.footer__links-link__social__media{
+    align-items: center;
+}
+}
+@media screen and (max-width : 950px){
+
+nav li{
+     font-size: 22px;
+    margin: 0.5rem;
+}
+nav li{
+     font-size: 16px;
+}
+.header__container{
+    gap: 2rem;
+    height: 333px;
+}
+.header__container-cover{
+    display: flex;
+    flex: 0.3;
+}
+.header__container-cover img{
+    width: 161px;
+    height:259px ;
+}
+.header__container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+.header__container-content h1{
+    font-size: 29px;
+    line-height: 45px;
+}
+.header__container-content p{
+     font-size: 14px;
+    line-height: 20px;
+}
+
+.header__container-perfume img{
+     width: 229px;
+    height: 229px;
+}
+.blur{
+    top: 15px;
+}  
+.blur img{
+    width: 277px;
+    height: 333px;
+}
+
+.CTA__container-card{
+    width: 258px;
+    height: 100px ;
+}
+.CTA__container-card p{
+    font-size: 28px;
+}
+.BestSellingPerfumes__container-items:first-child {
+    position: absolute;
+    top: 12%;
+    right: 5%; 
+}
+.SpecialPerfumes__container-covers__cover2 img{
+    width: 293px;
+    height: 390px;
+}
+.SpecialPerfumes__container-covers__cover1 img{
+    width: 185px;
+    height: 261px;
+    right: -3rem;
+    bottom:  12%;
+}
+.SpecialPerfumes__container-content p{
+   font-size: 26px;
+   line-height: 39px;
+   color: rgba(200, 135, 55, 1);
+}
+.SpecialPerfumes__container-content img{
+  filter: invert(53%) sepia(68%) saturate(643%) hue-rotate(7deg) brightness(95%) contrast(88%);
+}
+
+.contactUs{
+    padding: 6rem 4rem;
+}
+.contactUs__socialMedia{
+    display: flex;
+    flex-direction: column;
+}
+.contactUs__socialMedia-content{
+   flex-direction: column;
+   justify-content: center;
+    gap: 2rem;
+    width: 75%;
+}
+.contactUs__socialMedia-content h1{
+     font-size: 33px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.contactUs__subscibe-title h1,
+.contactUs__subscibe-title h3{
+     text-align: center;
+}
+
+}
+@media screen and (max-width : 800px){
+    .SpecialPerfumes__container{
+        flex-direction: column;
+    }
+    .SpecialPerfumes__container-covers{
+        width: 75%;
+        justify-content: flex-start;
+    }
+    .SpecialPerfumes__container-covers__cover2 img{
+    width: 313px;
+    height: 450px;
+}
+.SpecialPerfumes__container-covers__cover1 img{
+    width: 185px;
+    height: 271px;
+    right: -5rem;
+    bottom:  -3rem;
+}
+
+}
+@media screen and (max-width : 750px){
+nav{
+    display: flex;
+    flex-direction: column;
+}
+.navbar-menu,
+.navbar-btn{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+nav ul{
+    gap: 5px;
+}
+.header__container{
+    gap: 1rem;
+    height: 185px;
+}
+.header__container-cover img{
+    width: 121px;
+    height:179px ;
+}
+.header__container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+.header__container-content h1{
+    font-size: 14px;
+    line-height: 25px;
+}
+.header__container-content p{
+     font-size: 10px;
+    line-height: 16px;
+}
+.header__container-content button{
+      width: 121px;
+    height: 45px;
+    padding: 0.5rem 1rem;
+    gap: 5px;
+   
+}
+.header__container-content button p{
+    font-size:12px ;
+}
+.header__container-perfume img{
+     width: 155px;
+    height: 155px;
+}
+.blur{
+    top: 20px;
+}  
+.blur img{
+    width: 170px;
+    height: 185px;
+}
+.BestSellingPerfumes{
+    padding: 2rem ;
+}
+.BestSellingPerfumes__title h1{
+    font-size: 35px;
+    line-height: 45px;
+}
+.BestSellingPerfumes__container{
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 0;
+}
+.BestSellingPerfumes__container-items:first-child {
+    position: absolute;
+    top: 12%;
+    right: -10%; 
+}
+.DistinguishedOpponent{
+    padding: 2rem;
+}
+.DistinguishedOpponent__cover-pic1 img{
+    width: 443px;
+    height: 720px;
+}
+.DistinguishedOpponent__cover-pic2{
+    z-index: 999;
+    position: absolute;
+    right: -7rem;
+    bottom:  -2rem;
+}
+.DistinguishedOpponent__cover-pic2 img{
+    width: 245px;
+    height:345px;
+}
+.DistinguishedOpponent__contect h1{
+    font-size:42px;
+    font-weight: 700;
+    width: 90%;
+    line-height: 65px;
+    letter-spacing: 4%;
+    color: rgba(16, 10, 9, 1);
+}
+.DistinguishedOpponent__contect p{
+    font-size: 26px;
+    line-height: 35px;
+}
+.distinctivePerfume{
+    padding:2rem;
+}
+.distinctivePerfume__title{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.distinctivePerfume__title h1{
+     font-size: 32px;
+     text-align: center;
+    line-height: 46px;
+}
+.SpecialPerfumes{
+    padding: 2rem;
+}
+.contactUs__socialMedia-content{
+   flex-direction: column;
+   justify-content: center;
+    gap: 2rem;
+    width: 75%;
+}
+.contactUs__socialMedia-content h1,
+.contactUs__subscibe-title h1{
+     font-size: 22px;
+    line-height: 28px;
+}
+.contactUs__subscibe-title h3{
+   font-size: 20px;
+   line-height: 35px;
+}
+.contactUs__subscibe-title{
+    gap: 1rem;
+}
+
+
+.contactUs__subscibe-mail__input {
+   width: 268px;
+   height: 34px;
+}
+
+.footer__logo-container img{
+    width: 203px;
+    height: 94px;
+}
+.footer__logo h3{
+   font-size: 15px;
+   line-height: 25px;
+   text-align: center;
+}
+.footer__links-link h3,
+.footer__links-link__social__media h3{
+
+   font-size: 25px;
+   line-height: 35px;
+}
+.footer__links-link p,
+.footer__links-link__social__media p{
+   font-size: 16px;
+}
+
+.footer__links-link__social__media p {
+    width: 100%;
+}
+
+}
+@media screen and (max-width : 550px){
+
+nav li{
+     font-size: 12px;
+}
+header{
+    padding: 1rem;
+}
+.header__container-cover img{
+    width: 91px;
+    height:149px ;
+}
+
+.header__container-content h1{
+    font-size: 12px;
+    line-height: 20px;
+}
+.header__container-content p{
+     font-size: 8px;
+    line-height: 14px;
+}
+.header__container-content button{
+    width: 101px;
+    height: 38px;
+    padding: 0.25rem 0.5rem;
+    gap: 5px;
+   
+}
+.header__container-content button p{
+    font-size:9px ;
+}
+.header__container-perfume img{
+    width: 129px;
+    height: 129px;
+}
+.blur{
+    top: 8px;
+}  
+.blur img{
+    width: 137px;
+    height: 185px;
+}
+
+.BestSellingPerfumes__title h1{
+    font-size: 22px;
+    line-height: 35px;
+}
+.BestSellingPerfumes__container{
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.BestSellingPerfumes__container-items img{
+    width:  320px;
+    height: 520px;
+}
+.BestSellingPerfumes__container-items:first-child {
+    position: absolute;
+    top: 10%;
+    right: -10%; 
+}
+.DistinguishedOpponent{
+    align-items: center;
+}
+.DistinguishedOpponent__contect{
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+.DistinguishedOpponent__contect h1{
+    font-size:22px;
+    width: 100%;
+    line-height: 32px;
+}
+.DistinguishedOpponent__contect p{
+    font-size: 18px;
+    line-height: 26px;
+}
+.DistinguishedOpponent__cover{
+    justify-content: center;
+}
+.DistinguishedOpponent__cover-pic1 img{
+    width: 243px;
+    height: 420px;
+}
+.DistinguishedOpponent__cover-pic2{
+    z-index: 999;
+    position: absolute;
+    right: -5rem;
+    bottom:  -2rem;
+}
+.DistinguishedOpponent__cover-pic2 img{
+    width: 195px;
+    height:275px;
+}
+.distinctivePerfume__title h1{
+     font-size: 26px;
+    line-height: 32px;
+}
+
+
+.SpecialPerfumes__title h1{
+    font-size: 24px;
+    line-height: 37px;
+}
+.SpecialPerfumes__container-covers__cover2 img{
+    width: 193px;
+    height: 320px;
+}
+.SpecialPerfumes__container-covers__cover1 img{
+    width: 135px;
+    height: 211px;
+    right: -5rem;
+    bottom:  -3rem;
+}
+.SpecialPerfumes__container-content{
+    padding: 1rem 0;
+}
+    .SpecialPerfumes__container-content P{
+    font-size: 15px;
+    line-height: 34px;}
+    
+.contactUs__subscibe-mail {
+  flex-direction: column;
+  gap: 20px; 
+  padding: 1rem 0;
+  direction: rtl;
+ 
+}
+.showInMobile{
+    display: block;
+}
+.hideInMobile{
+    display: none;
+}
+}
